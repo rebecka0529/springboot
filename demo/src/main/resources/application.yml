@@ -1,0 +1,43 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/board?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+   
+      
+  jackson:
+   serialization:
+    fail-on-empty-beans: false 
+      
+  
+  hateoas:
+    use-hal-as-default-json-media-type: false
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    generate-ddl: true
+    show-sql: true
+  h2:
+    console:
+      enabled: true
+      path: /console
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 881218558153-ndr868i68rlofoo4l2gb488ksabi5q23.apps.googleusercontent.com
+            client-secret: kq6zIo0myJotHK5_0irhtYnW
+          facebook:
+            client-id: 465358593799840
+            client-secret: a37286e3dae00dcdce628f40dfe363f5
+custom:
+  oauth2:
+    kakao:
+      client-id: 1b8ff676ae01724ed77437f98d399543
